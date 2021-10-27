@@ -49,7 +49,7 @@ public class NotebookService {
           Integer diff = distanceCalculator.apply(it.trim(), trimmedWord);
           if (diff == 0) {
             frequency.incrementAndGet();
-          } else if (diff >= SIMILARITY_THRESHOLD) {
+          } else if (diff != -1) {
             similarWords.add(it);
           }
         });
